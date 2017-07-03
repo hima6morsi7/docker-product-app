@@ -1,0 +1,4 @@
+# This will prevent these modules to from being copied onto Docker image.
+
+node_modules
+npm-debug.log

@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'laikalaika';
+    src: url('fonts/laika.eot');
+    src: url('fonts/laika.eot?#iefix') format('embedded-opentype'),
+         url('fonts/laika.woff2') format('woff2'),
+         url('fonts/laika.woff') format('woff'),
+         url('fonts/laika.ttf') format('truetype'),
+         url('fonts/laika.svg#laikalaika') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+	background-color: #2c3e50; 
+}
+
+.page {
+	width: 980px;
+	margin: 0 auto;
+	background-color: #2ecc71; 
+}
+
+header {
+	color: #e74c3c;
+	font-family: 'laikalaika';
+	margin: 0 10px;
+    height: 203px;
+    color: #F62459;
+    border-bottom: 3px solid #F62459; 
+}
+
+.logo {
+    float: left;
+}
+
+.mandatory-star{
+    font-weight: bold;
+    color: red;
+    font-size: 120%;
+}
+
+header span {
+    float:left;
+    width: 230px;
+    margin: 28px 40px;
+    position: relative;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.navbar-form .form-group select, .navbar-form .form-group input {
+    width: 234px !important;
+}
+
+.jumbotron {
+    background-color: #2ecc71;
+    padding-top: 0px;
+    width: 980px;
+    float: left;
+}
+
+.products, .product_page {
+    width: 69%;
+    display: inline-block;
+    float: left;
+    padding-right: 20px;
+    min-height: 1px;
+}
+
+.products .product {
+    height: 140px;
+    border-bottom: 1px solid #F62459;
+}
+.product .date {
+    float: left;
+    height: 78px;
+    margin: 11px 20px 11px 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.product .date p {
+    margin: 25px 0;
+}
+
+.products .product img {
+    width: 110px;
+    height: 110px;
+    margin: 15px;
+    float: left;
+}
+
+.products .product .info {
+    float: left;
+    margin-left: 40px;
+    margin-top: 10px;
+   height: 110px; 
+   width: 344px;
+}
+
+.product .info p, .product .info b{
+    margin: 0;
+    line-height: 1;
+}
+
+.latest, .params {
+    margin-top: 20px;
+    width: 30%;
+    display: inline-block;
+    background-color: #27ae60;
+    border-radius: 10px;
+    float: left;
+}
+
+.latest h2 {
+    color: #9b59b6;
+}
+
+.latest .product {
+    width: 80%;
+    margin: 0 10% 10px 10%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F62459;
+}
+
+.latest .product:last-child {
+    border: none;
+}
+
+.latest .product img {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+.price {
+    font-size: 34px;
+    color: #d35400;
+}
+
+.line {
+    border-bottom: solid 2px #9b59b6; 
+    margin: 10px 0;
+}
+
+.product_page {
+    
+}
+
+.product_page h2{
+    /*text-align: left;*/
+}
+
+.product_page img {
+    height: 450px;
+    width: 450px;
+}
+
+.product_page .thumbs {
+    width: 450px;
+    margin: 10px auto;
+}
+
+.product_page .thumbs img {
+    height: 140px;
+    width: 140px;
+}
+
+.product_page .info {
+    text-align: left;
+}
+
+.wrap-icon {
+    height: 42px;
+}
+
+.wrap-icon .glyphicon{
+    font-size: 35px;
+}
+
+.send-msg-container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.send-msg-container input {
+    width: 100%;
+}
+
+.new-product-container{
+}
+
+.new-product-container .left-column, .new-product-container .right-column{
+   
+   width: 44%;    
+    float: left;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.new-product-container .form-group {
+/*    width: 80%;*/
+}
+
+.new-product-container .form-group label {
+    margin-bottom: 0px;
+}
+
+/*SignUp*/
+
+.signup-container{
+    width: 60%;
+    margin:  0 auto;
+}
+/*Pagination background-color */
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: #903030;
+}

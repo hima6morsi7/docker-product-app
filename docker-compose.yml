@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: npm run
+    volumes:
+      - .:/usr/app/src
+      - /usr/app/src/node_modules
+    ports:
+      - "3001:3001"

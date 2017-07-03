@@ -1,0 +1,44 @@
+<div class="jumbotron text-center">
+  <h2>Create a new product</h2>
+  <div class="new-product-container">
+     <form name="SendMessageForm">
+        <div class="left-column">
+            <div class="form-group">
+                <label for="inputName">Name</label><span class="mandatory-star">*</span>
+                <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="product.name" >
+
+
+                <label for="inputCategory">Categorie</label><span class="mandatory-star">*</span>
+                <select class="selectpicker show-tick form-control" title="Category" ng-init="product.category = categories[1]" ng-model="product.category" ng-options="category.name for category in categories"></select>
+
+                <label for="inputRegion">Region</label><span class="mandatory-star">*</span>
+                <select class="selectpicker show-tick form-control" title="Region" ng-init="product.region = regions[1]" ng-model="product.region" ng-options="region.name for region in regions"></select>
+
+                <label for="inputPrice">Price</label>
+                <input type="text" class="form-control" id="inputPrice" placeholder="10" ng-model="product.price" >
+
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="City" ng-model="product.location" >
+
+                <label for="inputZip">Postal code</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="Postal code" ng-model="product.zip_code" >
+            </div>
+
+        </div> <!-- !left column -->
+        <div class="right-column">
+
+            <div class="form-group">
+                <label for="textareaDescr">Description</label>
+                <textarea class="form-control" rows="15" id="textareaDescr" placeholder="" ng-model="product.descr" ></textarea>
+
+                <label for="inputImages">Images</label>
+                <input type="text" class="form-control" id="inputThumb1" placeholder="http://" ng-model="product.img1" ng-init="product.img1 = 'http://fakeimg.pl/100x200/23ff29'">
+                <input type="text" class="form-control" id="inputThumb2" placeholder="http://" ng-model="product.img2" ng-init="product.img2 = 'http://fakeimg.pl/200x400/ee7744'">
+                <input type="text" class="form-control" id="inputThumb3" placeholder="http://" ng-model="product.img3" ng-init="product.img3 = 'http://fakeimg.pl/300x300/aaa777'">
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="save(product)">Register</button>
+    </form>
+</div>
+</div>

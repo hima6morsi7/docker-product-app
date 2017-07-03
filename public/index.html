@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="productApp">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>product app</title>
+
+	<link rel="stylesheet" href="css/bootstrap.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="css/style.css"><!-- load style.css -->
+	<link rel="stylesheet" href="css/sweetalert.css">
+	<link rel="stylesheet" href="css/ui-bootstrap-csp.css" />
+</head>
+<body ng-controller="mainController">
+	<div class="page">
+		<header>
+			<a class="fa fa-home" ng-href="/#/products"><span>A simple idea, add create delete update product </span></a>
+		</header>
+		
+		<div id="wrapper">
+			<div ng-view></div>
+		</div>
+
+		<footer>
+			<span> All Rights Reserved</span>
+			<a ng-else="checkAuth()" class="btn btn-small btn-info" ng-href="/#/signin">signin</a>
+			<a class="btn btn-small btn-warning" ng-href="/#/register">signup</a>
+			<a class="btn btn-small btn-danger" ng-href="/#/logout">logout</a>	
+			<a class="btn btn-small btn-success" ng-href="/#/product/new">New Product</a>
+			<button type="button" class="btn btn-small btn-default" ng-click="refresh()">Refresh </button>	
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	 <script src="js/ui-bootstrap.js"></script>
+    <script src="js/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	 <script type="text/javascript" src="js/sweetalert.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-select.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+</body>
+</html>

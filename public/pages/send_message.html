@@ -1,0 +1,26 @@
+<div class="jumbotron text-center">
+		<h2>Send message to {{ product.seller }} for product {{ product.name }}</h2>
+		Date {{ product.created_at | date:'d MMM'}} à {{ product.created_at | date:'hh:mm'}}
+        in {{ product.category }}
+
+
+<div class="send-msg-container">
+
+	<form name="SendMessageForm">
+        <div class="form-group">
+            <label for="inputName">Name</label><span class="mandatory-star">*</span>
+            <input type="text" class="form-control" id="inputName" placeholder="Nom" ng-model="post.name">
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label><span class="mandatory-star">*</span>
+            <input type="text" class="form-control" id="inputEmail" placeholder="Email" ng-model="post.email">
+        </div>
+        <div class="form-group">
+            <label for="textareaMessage">Message</label><span class="mandatory-star">*</span>
+            <textarea class="form-control" rows="19" id="textareaMessage" placeholder="Message" ng-model="post.message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="save(post, false)">Send</button>
+    </form>
+
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="jumbotron text-center">
+  <h2>Registration</h2>
+  <div class="signup-container">
+    <div ng-if="error_signup" class="alert alert-danger">Form Incomplete</div>
+     <form name="SendMessageForm">
+        <div class="left-column">
+            <div class="form-group">
+                <label for="inputName">Name</label><span class="mandatory-star">*</span>
+                <input type="text" class="form-control" id="inputName" placeholder="John Doe" ng-model='register.username' >
+
+                <label for="inputEmail">Email</label><span class="mandatory-star">*</span>
+                <input type="email" class="form-control" id="inputEmail" placeholder="jack@example.com" ng-model='register.email'>
+
+                <label for="inputTelephone">Telephone</label>
+                <input type="tel" class="form-control" id="inputTelephone" ng-model='register.phone'>
+
+                <label for="inputPassword">Password</label><span class="mandatory-star">*</span>
+                <input type="password" class="form-control" id="inputPassword" ng-model='register.pass'>
+
+				<label for="inputRepeatPassword">Confirmation do not match</label><span class="mandatory-star">*</span>
+                <input type="password" class="form-control" id="inputRepeatPassword" ng-model='register.passConfirmation'>
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="register(register.username, register.email, register.phone, register.pass, register.passConfirmation)">Register</button>
+    </form>
+</div>
+</div>

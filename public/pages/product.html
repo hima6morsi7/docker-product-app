@@ -1,0 +1,62 @@
+<div class="jumbotron text-center">
+
+	<div class="product_page">
+
+		<div class="product">
+			<h2>{{ product.name }}</h2>
+			Date {{ product.created | date:'d MMM'}}
+			at {{ product.created | date:'hh:mm'}}
+			by {{ product.seller }}
+			
+			<img src="{{ product.img1 }}" alt="{{ product.name }}" class="img-rounded">
+			<div class="thumbs">
+				<img ng-if="product.img1" src="{{ product.img1 }}" alt="{{ product.name }}" class="img-thumbnail">
+				<img ng-if="product.img2" src="{{ product.img2 }}" alt="{{ product.name }}" class="img-thumbnail">
+				<img ng-if="product.img3" src="{{ product.img3 }}" alt="{{ product.name }}" class="img-thumbnail">
+			</div>
+
+			<div class="info">
+				<p><b>Price: <span class="price">{{ product.price }} $</span></b></p>
+				<p>City: {{ product.location }}</p>
+				<p>postal Code: {{ product.zip_code }}</p>
+				<div class="line"></div>
+				<p>Categorie: {{ product.category }}</p>
+				<div class="line"></div>
+				<p><b>Description:</b></p>
+				<p>{{ product.descr }}</p>	
+			</div>
+		</div>
+	</div>
+	<div class="params">
+		<h3>Contact {{ product.seller }}</h3>
+		<div>
+			<div class="wrap-icon">
+				<span class="glyphicon glyphicon-earphone"></span>
+			</div>
+			<p>{{ product.phone_number }}</p>
+		</div>
+
+		<div>
+			<div class="wrap-icon">
+				<span class="glyphicon glyphicon-envelope"></span>
+			</div>
+			<p><a ng-href="/#/product/{{product.id}}/message">Send a message</a></p>
+		</div>
+		<div ng-if="isAuth">
+			<h3>Manage product</h3>
+			<div>
+				<div class="wrap-icon">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</div>
+				<a ng-href="/#/product/{{product.id}}/edit"><p>Edit</p></a>
+			</div>
+
+			<div>
+				<div class="wrap-icon">
+					<span class="glyphicon glyphicon-trash"></span>
+				</div>
+				<a ng-click="deleteProduct(product.id)"><p>Delete</p></a>
+			</div>
+		</div>
+	</div>
+</div>
