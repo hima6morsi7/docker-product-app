@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var mongoosePaginate = require('mongoose-paginate');
 var SALT_WORK_FACTOR = 10;
-var mongodbURL = 'mongodb://<dbuser>:<dbpassword>@ds145952.mlab.com:45952/productapp';
+var mongodbURL = 'mongodb://admin:admin@ds145952.mlab.com:45952/productapp';
 var mongodbOptions = { };
 
 mongoose.connect(mongodbURL, mongodbOptions, function (err, res) {
